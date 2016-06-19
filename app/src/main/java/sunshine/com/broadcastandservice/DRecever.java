@@ -12,6 +12,6 @@ public class DRecever extends BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.e("qqqq","DRecever:"+getResultData());
-        Log.e("qqqq","DRecever--->intent:"+intent.getStringExtra("data"));
+        Log.e("qqqq","DRecever--->得到在intent里面携带的数据:"+intent.getStringExtra("data"));
     }
 }
