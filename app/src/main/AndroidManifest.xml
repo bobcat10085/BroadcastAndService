@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sunshine.com.broadcastandservice">
+
+    <permission android:name="com.test.permission" />
+    <uses-permission android:name="com.test.permission" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyService" />
+
+        <receiver android:name=".ScreenOnBroadcastRecever" />
+        <receiver android:name=".ScreenOffBroadcastRecever" />
+
+        <receiver android:name=".ARecever">
+            <intent-filter android:priority="1000">
+                <action android:name="com.test.hello" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BRecever">
+            <intent-filter android:priority="900">
+                <action android:name="com.test.hello" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".CRecever">
+            <intent-filter android:priority="800">
+                <action android:name="com.test.hello" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".DRecever">
+            <intent-filter android:priority="700">
+                <action android:name="com.test.hello" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
